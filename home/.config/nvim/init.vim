@@ -1,6 +1,19 @@
 set shell=/bin/sh
 
+call plug#begin()
+
 source $HOME/.config/nvim/plugins.vim
+
+if !empty(glob('$HOME/.config/nvim/plugins.local'))
+   source $HOME/.config/nvim/plugins.local
+endif
+
+call plug#end()
+
+if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
+   source $HOME/.config/nvim/plugin-settings.vim
+endif
+
 source $HOME/.config/nvim/ui.vim
 
 filetype plugin indent on
@@ -16,6 +29,9 @@ set nospell
 set shortmess+=I
 set viminfo='100,f1 " Save up to 100 marks, enable capital marks
 set visualbell " Turn off audible bell
+
+" Sets path variable to current directory
+set path=.,**
 
 set wildmenu
 set wildmode=longest,list:longest
