@@ -1,4 +1,5 @@
 augroup configgroup
+
   autocmd VimEnter * highlight clear SignColumn
   " autocmd FileType netrw nmap <silent> <buffer> <Esc> :bd<cr>
 
@@ -12,7 +13,7 @@ augroup configgroup
   autocmd FileType fish setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType html EmmetInstall
   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType html setlocal ts=4 sts=4 sw=4 noexpandtab indentkeys-=*<return>
+  autocmd FileType html setlocal ts=2 sts=2 sw=2 noexpandtab indentkeys-=*<return>
   autocmd FileType jade setlocal ts=2 sts=2 sw=2 noexpandtab
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab omnifunc=phpcomplete#CompletePHP
@@ -25,6 +26,7 @@ augroup configgroup
   let g:tern_show_signature_in_pum = 1
 
   autocmd FileType javascript setlocal omnifunc=tern#Complete
+  autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab
 
   " automatically resize panes on resize
   autocmd VimResized * exe 'normal! \<c-w>='
@@ -52,4 +54,15 @@ augroup configgroup
   " Enable Neomake
   autocmd! BufWritePost * Neomake
 
+  " Save folds
+  au BufWinLeave * silent! mkview
+  au BufWinEnter * silent! loadview
+
 augroup END
+
+" Add format option 'w' to add trailing white space, indicating that paragraph
+" continues on next line. This is to be used with mutt's 'text_flowed' option.
+augroup mail_trailing_whitespace
+    autocmd!
+    autocmd FileType mail setlocal formatoptions+=w
+  augroup END
