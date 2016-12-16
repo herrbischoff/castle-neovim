@@ -1,5 +1,3 @@
-call plug#begin()
-
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'sickill/vim-monokai'
 Plug 'tomasr/molokai'
@@ -16,7 +14,7 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/vimproc', { 'do': 'make' }
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'bling/vim-airline'
 Plug 'carlitux/deoplete-ternjs'
@@ -52,13 +50,14 @@ Plug 'othree/yajs.vim', { 'for': 'javascript' } | Plug 'othree/es.next.syntax.vi
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'reedes/vim-wheel'
 Plug 'rking/ag.vim'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree/', { 'on': 'NERDTreeToggle' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tobyS/pdv', { 'for': 'php' }
-Plug 'tomtom/tcomment_vim'
+" Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/nerdcommenter'
 Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
@@ -76,13 +75,4 @@ Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'wdalmut/vim-phpunit', { 'for': 'php' }
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-
-if !empty(glob('$HOME/.config/nvim/plugins.local'))
-   source $HOME/.config/nvim/plugins.local
-endif
-
-call plug#end()
-
-if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
-   source $HOME/.config/nvim/plugin-settings.vim
-endif
+Plug 'junegunn/seoul256.vim'
