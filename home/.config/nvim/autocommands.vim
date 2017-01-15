@@ -39,7 +39,7 @@ augroup configgroup
   " autocmd BufNewFile,BufRead *.py setl ts=4 sts=4 sw=4 tw=79 expandtab autoindent fileformat=unix
 
   " Markdown
-  autocmd BufNewFile,BufRead *.md,*.markdown setlocal ft=markdown
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal ft=markdown
   autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType markdown,textile setlocal textwidth=0 wrapmargin=0 wrap spell formatoptions+=l
 
