@@ -40,7 +40,7 @@ nmap ≥ <Plug>AirlineSelectNextTab
 let g:autofenc_enable = 1
 
 " Base16
-let base16colorspace=256
+" let base16colorspace=256
 
 " delimitMate
 let g:delimitMate_expand_cr = 1
@@ -72,9 +72,9 @@ nnoremap <space>f :Files<CR>
 " nnoremap <leader>u :GundoToggle<CR>
 
 " HexHighlight
-if exists('*HexHighlight()')
-  nnoremap <leader>h :call HexHighlight()<Return>
-endif
+" if exists('*HexHighlight()')
+  " nnoremap <leader>h :call HexHighlight()<Return>
+" endif
 
 " javascript-libraries-syntax
 let g:used_javascript_libs = 'jquery,underscore,react'
@@ -102,19 +102,15 @@ let g:phpcomplete_index_composer_command = '/usr/local/bin/composer'
 let g:pdv_template_dir = $HOME ."/.config/neovim/plugged/pdv/templates_snip"
 nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-let g:UltiSnipsEditSplit='vertical'
-
 " Vim Better Whitespace
 autocmd BufWritePre * StripWhitespace
 let g:better_whitespace_filetypes_blacklist=['diff', 'gitcommit', 'unite', 'qf', 'help', 'markdown']
 
 " vim-easy-align
-xnoremap ga <Plug>(EasyAlign) " Start interactive EasyAlign in visual mode (e.g. vipga)
-nnoremap ga <Plug>(EasyAlign) " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+xnoremap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+nnoremap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
 
 " vim-easymotion
 map <Leader> <Plug>(easymotion-prefix)
@@ -122,8 +118,8 @@ nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
 
 " vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 1
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_auto_colors = 1
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=239
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=237
 
