@@ -14,6 +14,10 @@ if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
    source $HOME/.config/nvim/plugin-settings.vim
 endif
 
+if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
+   source $HOME/.config/nvim/plugin-settings.local
+endif
+
 source $HOME/.config/nvim/ui.vim
 
 filetype plugin indent on
