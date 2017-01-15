@@ -40,15 +40,19 @@ nnoremap <silent> <F4> :StripWhitespace<CR>
 " Sort
 vnoremap <silent> <F5> :sort<CR>
 
-" Fast saving
+" Fast save
 nmap <leader>w :w!<cr>
+
+" Fast quit
+nmap <leader>q :qa!<cr>
+
+" Open and source nvim config
+nmap <Leader>v :e ~/.config/nvim/init.vim<CR>
+nmap <Leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Let's be reasonable, shall we? Move vertically by visual line
 nmap k gk
 nmap j gj
-
-" Fast quit
-nmap <leader>q :q!<cr>
 
 " Do not show stupid q: window
 map q: :q
@@ -59,11 +63,11 @@ vnoremap ` za
 nnoremap ~ zM
 vnoremap ~ zM
 
+" Enable jumping in insert mode
+inoremap <C-l> <Esc>$a
+
 " Make Y not dumb
 nnoremap Y y$
-
-" Opens nvim config for editing
-nmap <Leader>v :e ~/.config/nvim/init.vim<CR>
 
 " Disable Ex mode
 nnoremap Q <nop>
