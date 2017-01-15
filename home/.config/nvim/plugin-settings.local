@@ -13,6 +13,8 @@ let g:dash_map = {
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Previm
+let g:previm_open_cmd = 'open -a Safari'
 
 " UltiSnips
 " let g:UltiSnipsExpandTrigger       = '<tab>'
