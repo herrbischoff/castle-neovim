@@ -66,9 +66,9 @@ set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
 
 set nobackup
-set backupdir=~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/tmp,/var/tmp,/tmp
 set history=1000
 set undodir=~/.tmp " set undo file location
 set undofile
