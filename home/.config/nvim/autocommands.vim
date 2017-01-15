@@ -35,6 +35,10 @@ augroup configgroup
   autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
   autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
+  " Docker
+  autocmd BufNewFile,BufRead Dockerfile setlocal ft=dockerfile
+  autocmd FileType dockerfile setlocal ts=2 sts=2 sw=2 expandtab
+
   " Python
   " autocmd BufNewFile,BufRead *.py setl ts=4 sts=4 sw=4 tw=79 expandtab autoindent fileformat=unix
 
