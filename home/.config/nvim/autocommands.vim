@@ -51,9 +51,6 @@ augroup configgroup
   " Enable spellcheck on certain filetypes
   autocmd FileType gitcommit,markdown setlocal spell
 
-  " Enable Neomake
-  autocmd! BufWritePost * Neomake
-
   " Save folds
   au BufWinLeave * silent! mkview
   au BufWinEnter * silent! loadview
