@@ -22,6 +22,9 @@ noremap <leader>. :bn<CR>
 " nnoremap <Up>    <NOP>
 " nnoremap <Down>  <NOP>
 
+nmap <silent> <Left> <<
+nmap <silent> <Right> >>
+
 xmap ' S'
 xmap " S"
 xmap [ S[
@@ -91,12 +94,12 @@ nnoremap <C-h> <C-w><C-h>
 
 " Enable key mapping for moving lines up and down, somehow need to be the last
 " entry in keymaps
-nnoremap <silent> ∆ :m .+1<CR>==
-nnoremap <silent> ˚ :m .-2<CR>==
-inoremap <silent> ∆ <Esc>:m .+1<CR>==gi
-inoremap <silent> ˚ <Esc>:m .-2<CR>==gi
-vnoremap <silent> ∆ :m '>+1<CR>gv=gv
-vnoremap <silent> ˚ :m '<-2<CR>gv=gv
+nnoremap <silent> <down> :m .+1<CR>==
+nnoremap <silent> <up> :m .-2<CR>==
+inoremap <silent> <down> <Esc>:m .+1<CR>==gi
+inoremap <silent> <up> <Esc>:m .-2<CR>==gi
+vnoremap <silent> <down> :m '>+1<CR>gv=gv
+vnoremap <silent> <up> :m '<-2<CR>gv=gv
 
 " Quickfix for TO-DOs and FIX-MEs
 nmap <Leader>t :Ag \(TODO\\|FIXME\) .<CR>
