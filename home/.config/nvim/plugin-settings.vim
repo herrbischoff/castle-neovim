@@ -43,6 +43,10 @@ let g:autofenc_enable = 1
 " Base16
 " let base16colorspace=256
 
+" closetag
+inoremap <C-.> <C-R>=GetCloseTag()<CR>
+map <C-.> a<C-_><ESC>
+
 " delimitMate
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
