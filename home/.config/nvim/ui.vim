@@ -16,7 +16,7 @@ set background=dark
 set breakindent
 set colorcolumn=80 " Make a mark for column 80
 set copyindent " copy the previous indentation on autoindenting
-set cursorline
+set nocursorline
 set diffopt+=vertical
 set expandtab " use spaces instead of tabs
 set foldenable " enable folding
@@ -29,6 +29,7 @@ set hlsearch " highlight searches by default
 set ignorecase
 set incsearch " find the next match as we type the search
 set laststatus=2
+set lazyredraw
 set linebreak
 " set linespace=2 " Set line spacing
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
@@ -52,6 +53,7 @@ set tabstop=4
 set softtabstop=4 " in insert mode, tabs are 4 spaces
 set splitbelow
 set splitright
+" set termguicolors
 set textwidth=0 " turn off hard word wrapping
 set wrap
 set wrapmargin=0
