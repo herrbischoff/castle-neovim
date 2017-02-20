@@ -6,6 +6,8 @@ augroup configgroup
   " Filetypes
   filetype on
 
+  autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+
   " Syntax of these languages is fussy over tabs Vs spaces
   " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType c setlocal ts=8 sts=8 sw=8 noexpandtab
@@ -16,7 +18,8 @@ augroup configgroup
   autocmd FileType html setlocal ts=2 sts=2 sw=2 noexpandtab indentkeys-=*<return>
   autocmd FileType jade setlocal ts=2 sts=2 sw=2 noexpandtab
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab omnifunc=phpcomplete#CompletePHP
+  autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
+  " autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab omnifunc=phpcomplete#CompletePHP
   autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType vimwiki setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -47,13 +50,20 @@ augroup configgroup
   autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType markdown,textile setlocal textwidth=0 wrapmargin=0 wrap spell formatoptions+=l
 
-  " CSS/Stylus
-  autocmd BufNewFile,BufRead *.styl set filetype=stylus
+  " CSS
   autocmd BufNewFile,BufReadPost *.css set filetype=css
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab omnifunc=csscomplete#CompleteCSS
+
+  " Stylus
+  autocmd BufNewFile,BufRead *.styl set filetype=stylus
+  autocmd FileType stylus setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Pug
+  autocmd BufNewFile,BufRead *.pug set filetype=pug
+  autocmd FileType pug setlocal ts=2 sts=2 sw=2 expandtab
 
   " Enable spellcheck on certain filetypes
-  autocmd FileType gitcommit,markdown setlocal spell
+  autocmd FileType gitcommit,markdown,mail setlocal spell
 
   " Save folds
   au BufWinLeave * silent! mkview
