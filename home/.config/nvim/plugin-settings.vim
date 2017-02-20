@@ -16,14 +16,15 @@ let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tabs = 0
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 1
 
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap ¡ <Plug>AirlineSelectTab1
 nmap ™ <Plug>AirlineSelectTab2
 nmap £ <Plug>AirlineSelectTab3
