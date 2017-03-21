@@ -105,3 +105,38 @@ Plug 'vim-scripts/nginx.vim'
 " Plug 'xolox/vim-misc'
 " Plug 'xolox/vim-session'
 " Plug 'Konfekt/FastFold'
+"
+Plug 'vimwiki/vimwiki'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax'
+Plug 'Shougo/neco-vim'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'benekastah/neomake'
+Plug 'davidoc/taskpaper.vim'
+Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'parkr/vim-jekyll'
+Plug 'rizzatti/dash.vim'
+Plug 'itspriddle/vim-marked'
+Plug 'junegunn/goyo.vim'
+Plug 'w0rp/ale'
+Plug 'morhetz/gruvbox'
+Plug 'kannokanno/previm'
+Plug 'tyru/open-browser.vim'
+
+" Plug 'wakatime/vim-wakatime'
+" Plug 'Shutnik/jshint2.vim'
+" Plug 'Valloric/YouCompleteMe', { 'dir': '~/.config/nvim/plugged/YouCompleteMe', 'do': './install.py --clang-completer --tern-completer' }
+" Plug 'ervandew/supertab'
+" Plug 'godlygeek/csapprox'
+" Plug 'guns/xterm-color-table.vim'
+" Plug 'herrbischoff/cobalt2.vim'
+" Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+" Plug 'mattn/webapi-vim'
+" Plug 'morhetz/gruvbox'
+" Plug 'phpvim/phpcd.vim', { 'for': 'php' }
+" Plug 'scrooloose/syntastic'
+" Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+" Plug 'sjl/gundo.vim'
+" Plug 'skammer/vim-css-color'
+" Plug 'tobyS/vmustache'

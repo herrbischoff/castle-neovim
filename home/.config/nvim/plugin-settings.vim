@@ -131,3 +131,60 @@ let g:indent_guides_auto_colors = 1
 " vim-session
 let g:session_autosave = 'no'
 set sessionoptions-=options " Don't persist options and mappings because it can corrupt sessions.
+
+" ALE
+let g:ale_linters = {
+\   'html': ['htmlhint'],
+\   'php': ['phpcs'],
+\   'javascript': ['eslint']
+\}
+
+" Dash
+noremap <silent> <leader>d <Plug>DashSearch
+let g:dash_map = {
+  \ 'stylus' : ['css', 'stylus']
+  \ }
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+" let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+" let g:deoplete#ignore_sources.php = ['omni']
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+" Previm
+" let g:previm_open_cmd = 'open -a Safari'
+
+" UltiSnips
+" let g:UltiSnipsExpandTrigger       = '<tab>'
+let g:UltiSnipsListSnippets        = '<s-tab>'
+let g:UltiSnipsJumpForwardTrigger  = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+let g:UltiSnipsEditSplit           = 'vertical'
+let g:UltiSnipsSnippetsDir="$HOME/.config/nvim/UltiSnips"
+
+" vimtex
+let g:vimtex_view_general_viewer
+      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_options = '-r @line @pdf'
+
+" This adds a callback hook that updates Skim after compilation
+let g:vimtex_latexmk_callback_hook = 'UpdateSkim'
+function! UpdateSkim(status)
+  if !a:status | return | endif
+
+  let l:out = b:vimtex.out()
+  let l:cmd = [g:vimtex_view_general_viewer, '-r']
+  if !empty(system('pgrep Skim'))
+    call extend(l:cmd, ['-g'])
+  endif
+  if has('nvim')
+    call jobstart(l:cmd + [line('.'), l:out])
+  elseif has('job')
+    call job_start(l:cmd + [line('.'), l:out])
+  else
+    call system(join(l:cmd + [line('.'), shellescape(l:out)], ' '))
+  endif
+endfunction
+
+" vim:foldmethod=marker:foldlevel=0:ft=vim
