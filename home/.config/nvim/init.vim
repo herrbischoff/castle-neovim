@@ -4,9 +4,9 @@ call plug#begin()
 
 source $HOME/.config/nvim/plugins.vim
 
-if !empty(glob('$HOME/.config/nvim/plugins.local'))
-   source $HOME/.config/nvim/plugins.local
-endif
+" if !empty(glob('$HOME/.config/nvim/plugins.local'))
+   " source $HOME/.config/nvim/plugins.local
+" endif
 
 call plug#end()
 
@@ -14,9 +14,9 @@ if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
    source $HOME/.config/nvim/plugin-settings.vim
 endif
 
-if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
-   source $HOME/.config/nvim/plugin-settings.local
-endif
+" if !empty(glob('$HOME/.config/nvim/plugin-settings.vim'))
+   " source $HOME/.config/nvim/plugin-settings.local
+" endif
 
 source $HOME/.config/nvim/ui.vim
 
