@@ -82,10 +82,10 @@ nnoremap <space>f :Files<CR>
 " endif
 
 " javascript-libraries-syntax
-let g:used_javascript_libs = 'jquery,underscore,react'
+" let g:used_javascript_libs = 'jquery,underscore,react'
 
 " jsx
-let g:jsx_ext_required = 1 " Allow JSX in normal JS files
+" let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 " Multiple Cursors
 let g:multi_cursor_exit_from_visual_mode = 0
@@ -123,8 +123,8 @@ nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
 
 " vim-indent-guides
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_auto_colors = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 1
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=239
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=237
 

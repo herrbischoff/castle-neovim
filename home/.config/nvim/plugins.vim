@@ -12,74 +12,73 @@
 " Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 " Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
 " Plug 'tobyS/pdv', { 'for': 'php' }
-Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
-Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+
+" Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
 " Plug 'shawncplus/phpcomplete.vim'
-Plug 'lvht/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
-Plug 'wdalmut/vim-phpunit', { 'for': 'php' }
+" Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+" Plug 'lvht/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+" Plug 'wdalmut/vim-phpunit', { 'for': 'php' }
 
 """ Comments
-" Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdcommenter'
+" Plug 'tomtom/tcomment_vim'
 
 """ CSS
-Plug 'JulesWang/css.vim', { 'for': 'css' }
-Plug 'gko/vim-coloresque', { 'for': 'css' }
-Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'JulesWang/css.vim'
+Plug 'gko/vim-coloresque'
+Plug 'wavded/vim-stylus'
+
+""" Colorschemes
+Plug 'junegunn/seoul256.vim'
+Plug 'AlessandroYorba/Sidonia'
 
 """ JavaScript
-Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'javascript' }
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' }
+Plug 'carlitux/deoplete-ternjs'
+Plug 'elzr/vim-json'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
-Plug 'othree/jspc.vim', { 'for': 'javascript' }
-Plug 'othree/yajs.vim', { 'for': 'javascript' } | Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
-Plug 'posva/vim-vue', { 'for': ['javascript', 'html'] }
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
+Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'vue'] }
+" Plug 'elixir-lang/vim-elixir', { 'for': 'javascript' }
+" Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+" Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+" Plug 'othree/jspc.vim', { 'for': 'javascript' }
+" Plug 'othree/yajs.vim', { 'for': ['javascript', 'vue'] } | Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
 
 """ Markup Languages
-Plug 'digitaltoad/vim-pug', { 'for': ['jade', 'pug'] }
-Plug 'evidens/vim-twig', { 'for': ['twig', 'html'] }
-Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'tpope/vim-liquid', { 'for': 'liquid' }
-Plug 'vim-scripts/closetag.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'evidens/vim-twig'
+Plug 'mattn/emmet-vim'
+Plug 'othree/html5.vim'
+Plug 'tpope/vim-liquid'
+" Plug 'vim-scripts/closetag.vim'
 
 """ Swift
-Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
+Plug 'toyamarinyon/vim-swift'
 
 """ Ruby
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby'
 
 """ Go
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go'
 
 """ fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'Chiel92/vim-autoformat'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Konfekt/FastFold'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neopairs.vim'
-Plug 'Shougo/vimproc', { 'do': 'make' }
 Plug 'bling/vim-airline'
-Plug 'diepm/vim-rest-console'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
 Plug 'godlygeek/tabular'
-Plug 'joonty/vim-sauce'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -97,7 +96,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/nginx.vim', { 'for': 'nginx' }
-Plug 'vim-scripts/progressbar-widget'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+Plug 'vim-scripts/nginx.vim'
+" Plug 'Shougo/vimproc', { 'do': 'make' }
+" Plug 'diepm/vim-rest-console'
+" Plug 'joonty/vim-sauce'
+" Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+" Plug 'vim-scripts/progressbar-widget'
+" Plug 'xolox/vim-misc'
+" Plug 'xolox/vim-session'
+" Plug 'Konfekt/FastFold'

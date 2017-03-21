@@ -32,7 +32,8 @@ xmap { S{
 xmap ( S(
 
 " Toggle paste mode
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
+map <leader>pp :setlocal paste!<cr>
 
 " x does not overwrite yank buffer
 nnoremap x "_x
@@ -106,3 +107,13 @@ nmap <Leader>t :Ag \(TODO\\|FIXME\) .<CR>
 
 " open ag.vim
 nnoremap <leader>a :Ag
+
+" ===
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
+
+" Spell checking
+map <leader>ss :setlocal spell!<cr>
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>

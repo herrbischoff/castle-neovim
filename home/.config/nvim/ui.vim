@@ -43,7 +43,7 @@ set number
 set numberwidth=4
 set relativenumber
 set ruler
-set scrolloff=3 " Keep the cursor visible within 3 lines when scrolling
+set scrolloff=5 " Keep the cursor visible within 3 lines when scrolling
 set shiftwidth=4 " when reading, tabs are 4 spaces
 set showbreak=↪ " Show line wrapping
 set showmatch

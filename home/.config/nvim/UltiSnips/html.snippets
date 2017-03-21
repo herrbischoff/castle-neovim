@@ -3,14 +3,12 @@ snippet svg
   <use xlink:href="#$1"></use>
 </svg>
 endsnippet
-
 snippet repeater
 {% for item in post.get_field('$1') %}
   $2
 {% endfor %}
 $0
 endsnippet
-
 snippet html "HTML5 Template"
 <!DOCTYPE html>
 <html>
@@ -24,4 +22,16 @@ snippet html "HTML5 Template"
     ${3:body}
   </body>
 </html>
+endsnippet
+snippet attribution "Fancy header"
+<!--
+////////////////////////////////////////////////////////////////////////////////
+                _                  _   _         _       ___ ___
+               | |_ ___ ___ ___   | |_|_|___ ___| |_ ___|  _|  _|
+               |   | -_|  _|  _|  | . | |_ -|  _|   | . |  _|  _|
+               |_|_|___|_| |_|    |___|_|___|___|_|_|___|_| |_|
+         Hand-crafted in `date +%Y` // Thanks for checking out the source code.
+            If you need what you see here, visit me @ herrbischoff.com
+////////////////////////////////////////////////////////////////////////////////
+-->
 endsnippet

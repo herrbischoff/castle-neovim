@@ -28,6 +28,7 @@ augroup configgroup
   let g:tern_show_argument_hints = 'on_hold'
   let g:tern_show_signature_in_pum = 1
 
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType javascript setlocal omnifunc=tern#Complete
   autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab
 
@@ -61,6 +62,11 @@ augroup configgroup
   " Pug
   autocmd BufNewFile,BufRead *.pug set filetype=pug
   autocmd FileType pug setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Vue
+  " autocmd BufNewFile,BufRead *.vue set ft=vue
+  autocmd BufNewFile,BufRead *.vue setf vue.html.javascript.css
+  autocmd FileType vue setlocal ts=2 sts=2 sw=2 expandtab
 
   " Enable spellcheck on certain filetypes
   autocmd FileType gitcommit,markdown,mail setlocal spell

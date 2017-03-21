@@ -85,4 +85,7 @@ endif
 
 highlight Comment cterm=italic
 
+" Add home directory to runtimepath
+" set rtp^=$HOME
+
 " vim:foldmethod=marker:foldlevel=0

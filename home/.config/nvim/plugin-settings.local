@@ -2,7 +2,7 @@
 let g:ale_linters = {
 \   'html': ['htmlhint'],
 \   'php': ['phpcs'],
-\   'javascript': ['jshint']
+\   'javascript': ['eslint']
 \}
 
 " Dash
@@ -13,11 +13,13 @@ let g:dash_map = {
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
+" let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+" let g:deoplete#ignore_sources.php = ['omni']
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
 " Previm
-let g:previm_open_cmd = 'open -a Safari'
+" let g:previm_open_cmd = 'open -a Safari'
 
 " UltiSnips
 " let g:UltiSnipsExpandTrigger       = '<tab>'
@@ -25,6 +27,7 @@ let g:UltiSnipsListSnippets        = '<s-tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 let g:UltiSnipsEditSplit           = 'vertical'
+let g:UltiSnipsSnippetsDir="$HOME/.config/nvim/UltiSnips"
 
 " vimtex
 let g:vimtex_view_general_viewer
