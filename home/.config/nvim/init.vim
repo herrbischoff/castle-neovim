@@ -35,7 +35,8 @@ set viminfo='100,f1 " Save up to 100 marks, enable capital marks
 set visualbell " Turn off audible bell
 
 " Sets path variable to current directory
-set path=.,**
+" set path=.,**
+set path+=**
 
 set wildmenu
 set wildmode=longest,list:longest
