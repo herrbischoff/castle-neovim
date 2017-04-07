@@ -1,7 +1,3 @@
-" colorscheme gruvbox
-"colorscheme base16-monokai
-colorscheme seoul256
-let g:seoul256_background = 236
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 "if exists('$TMUX')
@@ -23,7 +19,7 @@ set foldenable " enable folding
 set foldlevelstart=99 " open most folds by default
 set foldnestmax=10 " 10 nested fold max
 set foldmethod=indent " fold based on indent level
-set formatoptions+=or
+" set formatoptions+=a
 set gdefault
 set hlsearch " highlight searches by default
 set ignorecase
@@ -53,8 +49,15 @@ set tabstop=4
 set softtabstop=4 " in insert mode, tabs are 4 spaces
 set splitbelow
 set splitright
-" set termguicolors
+if (has("termguicolors"))
+  set termguicolors
+endif
 set textwidth=0 " turn off hard word wrapping
 set wrap
 set wrapmargin=0
+
 syntax enable " enable syntax processing
+
+" let g:seoul256_background = 236
+" colorscheme seoul256
+colorscheme OceanicNext

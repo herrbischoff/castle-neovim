@@ -65,14 +65,14 @@ set ttimeoutlen=10
 " Better Completion
 " set complete=.,w,b,u,t
 set completeopt=longest,menuone
-set omnifunc=syntaxcomplete#Complete
+" set omnifunc=syntaxcomplete#Complete
 
 set nobackup
 set backupdir=~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/tmp,/var/tmp,/tmp
 set history=1000
-set undodir=~/.tmp " set undo file location
+set undodir=~/tmp " set undo file location
 set undofile
 set undolevels=1000 " use many muchos levels of undo
 set writebackup

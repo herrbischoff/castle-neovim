@@ -9,8 +9,8 @@ map <ScrollWheelDown> <C-E>
 map <S-ScrollWheelDown> <C-D>
 
 " map <leader>, and <leader>. to buffer prev/next buffer
-noremap <leader>, :bp<CR>
-noremap <leader>. :bn<CR>
+noremap <Leader>, :bp<CR>
+noremap <Leader>. :bn<CR>
 
 " Disable arrow keys
 " inoremap <Left>  <NOP>
@@ -21,9 +21,6 @@ noremap <leader>. :bn<CR>
 " nnoremap <Right> <NOP>
 " nnoremap <Up>    <NOP>
 " nnoremap <Down>  <NOP>
-
-nmap <silent> <Left> <<
-nmap <silent> <Right> >>
 
 xmap ' S'
 xmap " S"
@@ -81,11 +78,7 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " Quick escaping in insert mode
-inoremap jj <ESC>
 inoremap \\ <ESC>
-
-" Enable w!! for saving file with root privileges
-cmap w!! w !sudo tee % >/dev/null
 
 " Switch windows
 nnoremap <C-j> <C-w><C-j>

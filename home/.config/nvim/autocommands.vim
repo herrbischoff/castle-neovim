@@ -6,18 +6,18 @@ augroup configgroup
   " Filetypes
   filetype on
 
-  autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+  " autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
 
   " Syntax of these languages is fussy over tabs Vs spaces
   " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType c setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType crontab setlocal nobackup nowritebackup
-  autocmd FileType fish setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType html EmmetInstall
   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType html setlocal ts=2 sts=2 sw=2 noexpandtab indentkeys-=*<return>
   autocmd FileType jade setlocal ts=2 sts=2 sw=2 noexpandtab
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType bash,fish,sh,zsh setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
   " autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab omnifunc=phpcomplete#CompletePHP
   autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
@@ -44,7 +44,7 @@ augroup configgroup
   autocmd FileType dockerfile setlocal ts=2 sts=2 sw=2 expandtab
 
   " Python
-  " autocmd BufNewFile,BufRead *.py setl ts=4 sts=4 sw=4 tw=79 expandtab autoindent fileformat=unix
+  autocmd BufNewFile,BufRead *.py setl ts=4 sts=4 sw=4 tw=79 expandtab autoindent fileformat=unix
 
   " Markdown
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal ft=markdown
@@ -82,4 +82,5 @@ augroup END
 augroup mail_trailing_whitespace
     autocmd!
     autocmd FileType mail setlocal formatoptions+=w
+    let b:deoplete_disable_auto_complete=1
   augroup END
