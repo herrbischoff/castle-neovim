@@ -16,9 +16,9 @@ Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neco-vim'
 " }}}
 " Colorschemes {{{
-" Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'mhartington/oceanic-next'
-" Plug 'herrbischoff/cobalt2.vim'
+Plug 'herrbischoff/cobalt2.vim'
 " }}}
 " Comments {{{
 Plug 'scrooloose/nerdcommenter'
