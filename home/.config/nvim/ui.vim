@@ -61,3 +61,10 @@ syntax enable " enable syntax processing
 " let g:seoul256_background = 236
 " colorscheme seoul256
 colorscheme OceanicNext
+
+" Enable italics
+highlight Comment gui=italic
+highlight Comment cterm=italic
+set t_ZH=[3m
+set t_ZR=[23m
+

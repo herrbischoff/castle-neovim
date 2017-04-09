@@ -85,8 +85,6 @@ if !empty(glob('$HOME/.config/nvim/init.local'))
    source $HOME/.config/nvim/init.local
 endif
 
-highlight Comment cterm=italic
-
 " Add home directory to runtimepath
 " set rtp^=$HOME
 
