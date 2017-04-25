@@ -64,8 +64,8 @@ augroup configgroup
   autocmd FileType pug setlocal ts=2 sts=2 sw=2 expandtab
 
   " Vue
-  " autocmd BufNewFile,BufRead *.vue set ft=vue
-  autocmd BufNewFile,BufRead *.vue setf vue.html.javascript.css
+  autocmd FileType vue syntax sync fromstart
+  autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
   autocmd FileType vue setlocal ts=2 sts=2 sw=2 expandtab
 
   " Enable spellcheck on certain filetypes

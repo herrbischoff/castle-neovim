@@ -19,6 +19,7 @@ Plug 'Shougo/neco-vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'herrbischoff/cobalt2.vim'
+Plug 'godlygeek/csapprox'
 " }}}
 " Comments {{{
 Plug 'scrooloose/nerdcommenter'
@@ -42,6 +43,9 @@ Plug 's3rvac/AutoFenc'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+" }}}
+" Elixir {{{
+Plug 'slashmili/alchemist.vim'
 " }}}
 " External Tools {{{
 Plug 'rizzatti/dash.vim'
@@ -107,17 +111,19 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'rking/ag.vim'
 " }}}
 " Syntax {{{
-Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
-Plug 'vim-scripts/nginx.vim', { 'for': 'nginx' }
 Plug 'davidoc/taskpaper.vim'
-Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
-Plug 'evidens/vim-twig', { 'for': 'twig' }
-Plug 'othree/html5.vim'
-Plug 'tpope/vim-liquid', { 'for': 'liquid' }
-Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
+Plug 'sheerun/vim-polyglot'
+" Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
+" Plug 'vim-scripts/nginx.vim', { 'for': 'nginx' }
+" Plug 'lervag/vimtex', { 'for': 'tex' }
+" Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+" Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
+" Plug 'evidens/vim-twig', { 'for': 'twig' }
+" Plug 'othree/html5.vim'
+" Plug 'tpope/vim-liquid', { 'for': 'liquid' }
+" Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
+" Plug 'dag/vim-fish', { 'for': 'fish' }
 " }}}
 " Tags {{{
 Plug 'ludovicchabant/vim-gutentags'
