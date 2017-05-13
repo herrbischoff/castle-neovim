@@ -68,3 +68,6 @@ highlight Comment cterm=italic
 set t_ZH=[3m
 set t_ZR=[23m
 
+" Make background transparent
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
