@@ -83,6 +83,11 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 " }}}
+" neocomplete {{{
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" }}}
 " editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:EditorConfig_exec_path        = '/opt/local/bin/editorconfig'
@@ -127,9 +132,9 @@ let g:NERDCompactSexyComs = 1
 let g:NERDCommentEmptyLines = 1
 " }}}
 " NerdTree {{{
-map - :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable  = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+" map - :NERDTreeToggle<CR>
+" let g:NERDTreeDirArrowExpandable  = '▸'
+" let g:NERDTreeDirArrowCollapsible = '▾'
 " }}}
 " pdv {{{
 let g:pdv_template_dir = $HOME ."/.config/nvim/plugged/pdv/templates_snip"

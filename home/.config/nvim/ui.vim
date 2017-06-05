@@ -7,6 +7,14 @@
   "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "endif
+
+if (has('gui_macvim'))
+    set linespace=2 " Set line spacing
+    set guifont=Operator\ Mono\ Book\ for\ Powerline:h14
+    set guioptions-=r
+    set guicursor=a:blinkon0
+endif
+
 set autoindent " autoindent based on line above, works most of the time
 set background=dark
 set breakindent
@@ -27,7 +35,6 @@ set incsearch " find the next match as we type the search
 set laststatus=2
 set lazyredraw
 set linebreak
-" set linespace=2 " Set line spacing
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set modelines=1
 set mouse=a " Enable mouse use in all modes
@@ -49,9 +56,9 @@ set tabstop=4
 set softtabstop=4 " in insert mode, tabs are 4 spaces
 set splitbelow
 set splitright
-if (has("termguicolors"))
-  set termguicolors
-endif
+" if (has("termguicolors"))
+  " set termguicolors
+" endif
 set textwidth=0 " turn off hard word wrapping
 set wrap
 set wrapmargin=0
@@ -65,9 +72,11 @@ colorscheme OceanicNext
 " Enable italics
 highlight Comment gui=italic
 highlight Comment cterm=italic
-set t_ZH=[3m
-set t_ZR=[23m
+" set t_ZH=[3m
+" set t_ZR=[23m
 
 " Make background transparent
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+if (has('nvim'))
+  highlight Normal guibg=none ctermbg=none
+  highlight NonText guibg=none ctermbg=none
+endif

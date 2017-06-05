@@ -4,22 +4,26 @@ Plug 'vim-airline/vim-airline-themes'
 " }}}
 " Autocomplete {{{
 " Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --tern-completer' }
+if (has('nvim'))
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'zchee/deoplete-zsh', { 'for': 'zsh' }
+  Plug 'zchee/deoplete-docker', { 'for': 'docker' }
+  Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+  Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
+else
+  Plug 'Shougo/neocomplete.vim'
+  Plug 'Valodim/vim-zsh-completion', { 'for': 'zsh' }
+endif
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-zsh', { 'for': 'zsh' }
-Plug 'Valodim/vim-zsh-completion', { 'for': 'zsh' }
-Plug 'zchee/deoplete-docker', { 'for': 'docker' }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
 Plug 'Shougo/context_filetype.vim'
-Plug 'Shougo/neco-syntax'
-Plug 'Shougo/neco-vim'
+" Plug 'Shougo/neco-syntax'
+" Plug 'Shougo/neco-vim'
 " }}}
 " Colorschemes {{{
 Plug 'junegunn/seoul256.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'herrbischoff/cobalt2.vim'
-Plug 'godlygeek/csapprox'
+" Plug 'godlygeek/csapprox'
 " }}}
 " Comments {{{
 Plug 'scrooloose/nerdcommenter'
@@ -66,9 +70,9 @@ Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install && npm ins
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn add tern --global' }
 Plug 'elzr/vim-json'
 Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
-Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/jspc.vim', { 'for': 'javascript' }
 
 " Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'vue'] }
@@ -87,7 +91,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
-Plug 'scrooloose/nerdtree/', { 'on': 'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree/', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-rooter'
 Plug 'mhinz/vim-startify'
 Plug 'reedes/vim-wheel'
@@ -114,6 +118,7 @@ Plug 'rking/ag.vim'
 Plug 'davidoc/taskpaper.vim'
 Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
 Plug 'sheerun/vim-polyglot'
+Plug 'vifm/vifm.vim'
 " Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
 " Plug 'vim-scripts/nginx.vim', { 'for': 'nginx' }
 " Plug 'lervag/vimtex', { 'for': 'tex' }

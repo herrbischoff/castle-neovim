@@ -1,7 +1,7 @@
 let mapleader = "\<Space>"
 
 " Remove search highlight
-nnoremap <ESC><ESC> :noh<CR>
+nnoremap <silent> <ESC><ESC> :noh<CR>
 
 map <ScrollWheelUp> <C-Y>
 map <S-ScrollWheelUp> <C-U>
@@ -59,10 +59,10 @@ nmap j gj
 map q: :q
 
 " Backtick to toggle folds, tilde to close all
-nnoremap ` za
-vnoremap ` za
-nnoremap ~ zM
-vnoremap ~ zM
+" nnoremap ` za
+" vnoremap ` za
+" nnoremap ~ zM
+" vnoremap ~ zM
 
 " Enable jumping in insert mode
 inoremap <C-l> <Esc>$a
