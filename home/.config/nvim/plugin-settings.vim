@@ -45,7 +45,8 @@ let g:ale_set_quickfix = 1
 " let g:ale_lint_on_text_changed = 'normal'
 let g:ale_linters = {
 \   'html': ['htmlhint'],
-\   'javascript': ['eslint']
+\   'javascript': ['eslint'],
+\   'vim': ['vint']
 \}
 " }}}
 " AutoFenc {{{
@@ -67,7 +68,7 @@ let g:delimitMate_expand_space = 1
 " let g:delimitMate_jump_expansion = 1
 " }}}
 " deoplete {{{
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 " let g:deoplete#enable_ignore_case = 1 let g:deoplete#enable_smart_case = 1
 " let g:deoplete#enable_camel_case = 1 let g:deoplete#enable_refresh_always =
@@ -79,14 +80,46 @@ let g:deoplete#enable_at_startup = 1
 " let g:tern_request_timeout = 6000
 " let g:tern#command = ["tern"]
 " let g:tern#arguments = ["--persistent"]
+
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_ignore_case = 1
+" let g:deoplete#enable_smart_case = 1
+" let g:deoplete#enable_camel_case = 1
+" let g:deoplete#enable_refresh_always = 1
+" let g:deoplete#max_abbr_width = 0
+" let g:deoplete#max_menu_width = 0
+" let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 "
-inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+" let g:tern_request_timeout = 1
+" let g:tern_request_timeout = 6000
+" let g:tern#command = ["tern"]
+" let g:tern#arguments = ["--persistent"]
+
+" inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+" let g:tern#filetypes = [
+    " \ 'jsx',
+    " \ 'javascript.jsx',
+    " \ 'vue'
+    " \ ]
+
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 " neocomplete {{{
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+" let g:neocomplete#enable_at_startup = 1
+" let g:neocomplete#enable_smart_case = 1
+" let g:neocomplete#sources#syntax#min_keyword_length = 3
+"
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 " editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -116,6 +149,10 @@ nnoremap <space>f :Files<CR>
 " if exists('*HexHighlight()')
   " nnoremap <leader>h :call HexHighlight()<Return>
 " endif
+" }}}
+" investigate.vim {{{
+let g:investigate_use_dash=1
+let g:investigate_use_dash_for_ruby=1
 " }}}
 " javascript-libraries-syntax {{{
 " let g:used_javascript_libs = 'jquery,underscore,react'
@@ -192,12 +229,22 @@ nmap t <Plug>(easymotion-t2)
 " }}}
 " vim-indent-guides {{{
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#2D353D
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#343D46
+" let g:indent_guides_auto_colors = 1
+
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black guibg=#1F2D37
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey guibg=#1C2A33
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#1F2D37
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#1C2A33
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=239
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=237
 " }}}
 " vim-plug {{{
 let g:plug_window = 'above 25new'
+" }}}
+" vim-rooter {{{
+let g:rooter_silent_chdir = 1
 " }}}
 " vim-session {{{
 let g:session_autosave = 'no'
@@ -206,6 +253,8 @@ set sessionoptions-=options " Don't persist options and mappings because it can 
 " YouCompleteMe {{{
 " let g:ycm_key_list_select_completion = ['<C-n>']
 " let g:ycm_key_list_previous_completion = ['<C-p>']
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
