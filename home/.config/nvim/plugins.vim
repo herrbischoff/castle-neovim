@@ -95,7 +95,11 @@ Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
 " }}}
 " Miscellaneous {{{
-Plug 'Shougo/vimproc', { 'do': 'make' }
+if g:os ==# 'FreeBSD'
+    Plug 'Shougo/vimproc', { 'do': 'gmake' }
+else
+    Plug 'Shougo/vimproc', { 'do': 'make' }
+endif
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'

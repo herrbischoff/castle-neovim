@@ -11,6 +11,8 @@ scriptencoding utf-8
 
 set shell=/bin/sh
 
+let g:os=substitute(system('uname'), '\n', '', '')
+
 call plug#begin()
 
 source $HOME/.config/nvim/plugins.vim
