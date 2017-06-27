@@ -1,13 +1,13 @@
-" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-"if exists('$TMUX')
-  "let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  "let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-"else
-  "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-"endif
+" Cursor shape
+" if exists('$TMUX')
+    " let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+    " let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+" else
+    " let &t_SI = "\e[5 q"
+    " let &t_EI = "\e[2 q"
+" endif
 
+" MacVim
 if (has('gui_macvim'))
     set linespace=2 " Set line spacing
     set guifont=Operator\ Mono\ Book\ for\ Powerline:h14
@@ -15,6 +15,7 @@ if (has('gui_macvim'))
     set guicursor=a:blinkon0
 endif
 
+set t_Co=256
 set autoindent " autoindent based on line above, works most of the time
 set background=dark
 set breakindent
@@ -51,17 +52,23 @@ set shiftwidth=4 " when reading, tabs are 4 spaces
 set showbreak=↪ " Show line wrapping
 set showmatch
 set smartcase
-set smartindent " smarter indent for C-like languages
+" set smartindent " smarter indent for C-like languages
+set noshiftround
+set nopreserveindent
+set smarttab
+set nosmartindent
 set tabstop=4
 set softtabstop=4 " in insert mode, tabs are 4 spaces
 set splitbelow
 set splitright
-" if (has("termguicolors"))
-  " set termguicolors
-" endif
+if (has("termguicolors"))
+  set termguicolors
+endif
 set textwidth=0 " turn off hard word wrapping
 set wrap
 set wrapmargin=0
+set tagcase=followscs " Follow smartcase and ignorecase when doing tag search
+set wrapscan
 
 syntax enable " enable syntax processing
 
@@ -70,8 +77,8 @@ syntax enable " enable syntax processing
 colorscheme OceanicNext
 
 " Enable italics
-highlight Comment gui=italic
-highlight Comment cterm=italic
+" highlight Comment gui=italic
+" highlight Comment cterm=italic
 " set t_ZH=[3m
 " set t_ZR=[23m
 
@@ -79,4 +86,7 @@ highlight Comment cterm=italic
 if (has('nvim'))
   highlight Normal guibg=none ctermbg=none
   highlight NonText guibg=none ctermbg=none
+else
+    highlight Normal ctermbg=none
+    highlight NonText ctermbg=none
 endif
