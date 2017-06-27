@@ -41,6 +41,9 @@ nnoremap <silent> <F4> :StripWhitespace<CR>
 " Sort
 vnoremap <silent> <F5> :sort<CR>
 
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " Fast save
 nmap <leader>w :w!<cr>
 
