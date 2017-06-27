@@ -3,21 +3,27 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " }}}
 " Autocomplete {{{
-" Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --tern-completer' }
-if (has('nvim'))
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'zchee/deoplete-zsh', { 'for': 'zsh' }
-  Plug 'zchee/deoplete-docker', { 'for': 'docker' }
-  Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-  Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
-else
-  Plug 'Shougo/neocomplete.vim'
-  Plug 'Valodim/vim-zsh-completion', { 'for': 'zsh' }
-endif
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'Shougo/context_filetype.vim'
+" if (has('nvim'))
+" Plug 'zchee/deoplete-zsh', { 'for': 'zsh' }
+" Plug 'zchee/deoplete-docker', { 'for': 'docker' }
+" Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+" Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
+" else
+" Plug 'Shougo/neocomplete.vim'
+" Plug 'Valodim/vim-zsh-completion', { 'for': 'zsh' }
+" endif
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn install' }
+" Plug 'Shougo/context_filetype.vim'
 " Plug 'Shougo/neco-syntax'
 " Plug 'Shougo/neco-vim'
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --tern-completer' }
+Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/nvim-cm-tern',  {'do': 'yarn install'}
+Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
+Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
+Plug 'davidhalter/jedi-vim'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'Shougo/neosnippet-snippets'
 " }}}
 " Colorschemes {{{
 Plug 'junegunn/seoul256.vim'
@@ -26,7 +32,8 @@ Plug 'herrbischoff/cobalt2.vim'
 " Plug 'godlygeek/csapprox'
 " }}}
 " Comments {{{
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
+Plug 'tyru/caw.vim'
 " }}}
 " CSS {{{
 Plug 'JulesWang/css.vim'
@@ -57,6 +64,7 @@ Plug 'rizzatti/dash.vim'
 " Formatting {{{
 Plug 'Chiel92/vim-autoformat'
 Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'thaerkh/vim-indentguides'
 Plug 'tpope/vim-surround'
 Plug 'sickill/vim-pasta'
 Plug 'junegunn/vim-easy-align'
@@ -66,14 +74,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " }}}
 " JavaScript {{{
-Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install && npm install -g tern' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn add tern --global' }
+" Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'yarn install' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn add tern --global' }
 Plug 'elzr/vim-json'
 Plug 'moll/vim-node', { 'for': 'javascript' }
-" Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+" Plug '1995eaton/vim-better-javascript-completion'
 " Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/jspc.vim', { 'for': 'javascript' }
+" Plug 'othree/jspc.vim', { 'for': 'javascript' }
 
 " Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'vue'] }
 " Plug 'elixir-lang/vim-elixir', { 'for': 'javascript' }
@@ -90,11 +99,15 @@ Plug 'Shougo/vimproc', { 'do': 'make' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'keith/investigate.vim'
 Plug 'vimwiki/vimwiki'
 " Plug 'scrooloose/nerdtree/', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-rooter'
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 Plug 'reedes/vim-wheel'
+" }}}
+" Go {{{
+Plug 'fatih/vim-go'
 " }}}
 " PHP {{{
 Plug 'tobyS/pdv', { 'for': 'php' }
@@ -119,6 +132,9 @@ Plug 'davidoc/taskpaper.vim'
 Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
 Plug 'sheerun/vim-polyglot'
 Plug 'vifm/vifm.vim'
+Plug 'keith/swift.vim'
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'tmux-plugins/vim-tmux'
 " Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
 " Plug 'vim-scripts/nginx.vim', { 'for': 'nginx' }
 " Plug 'lervag/vimtex', { 'for': 'tex' }
