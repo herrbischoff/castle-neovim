@@ -6,24 +6,30 @@ Plug 'vim-airline/vim-airline-themes'
 " if (has('nvim'))
 " Plug 'zchee/deoplete-zsh', { 'for': 'zsh' }
 " Plug 'zchee/deoplete-docker', { 'for': 'docker' }
-" Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 " Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
 " else
 " Plug 'Shougo/neocomplete.vim'
 " Plug 'Valodim/vim-zsh-completion', { 'for': 'zsh' }
 " endif
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn install' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install' }
 " Plug 'Shougo/context_filetype.vim'
 " Plug 'Shougo/neco-syntax'
 " Plug 'Shougo/neco-vim'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --tern-completer' }
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/nvim-cm-tern',  {'do': 'yarn install'}
-Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-Plug 'davidhalter/jedi-vim'
+" Plug 'roxma/nvim-completion-manager'
+" Plug 'roxma/nvim-cm-tern',  {'do': 'yarn install'}
+" Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
+" Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
+" Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+" let g:LanguageClient_autoStart = 1
+" nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+" Plug 'davidhalter/jedi-vim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/echodoc.vim'
 " }}}
 " Colorschemes {{{
 Plug 'junegunn/seoul256.vim'
@@ -74,12 +80,14 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " }}}
 " JavaScript {{{
-" Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'yarn install' }
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
 " Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn add tern --global' }
 Plug 'elzr/vim-json'
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 " Plug '1995eaton/vim-better-javascript-completion'
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'othree/jspc.vim', { 'for': 'javascript' }

@@ -1,8 +1,19 @@
+scriptencoding utf-8
+
+"
+"                             __
+" .--------.---.-.-----.-----|__.-----.-----.-----.
+" |        |  _  |  _  |  _  |  |     |  _  |__ --|
+" |__|__|__|___._|   __|   __|__|__|__|___  |_____|
+"                |__|  |__|           |_____|
+"
+
 let mapleader = "\<Space>"
 
 " Remove search highlight
 nnoremap <silent> <ESC><ESC> :noh<CR>
 
+" Sane mouse scrolling
 map <ScrollWheelUp> <C-Y>
 map <S-ScrollWheelUp> <C-U>
 map <ScrollWheelDown> <C-E>
@@ -12,16 +23,7 @@ map <S-ScrollWheelDown> <C-D>
 noremap <Leader>, :bp<CR>
 noremap <Leader>. :bn<CR>
 
-" Disable arrow keys
-" inoremap <Left>  <NOP>
-" inoremap <Right> <NOP>
-" inoremap <Up>    <NOP>
-" inoremap <Down>  <NOP>
-" nnoremap <Left>  <NOP>
-" nnoremap <Right> <NOP>
-" nnoremap <Up>    <NOP>
-" nnoremap <Down>  <NOP>
-
+" surround.vim mappings
 xmap ' S'
 xmap " S"
 xmap [ S[
@@ -29,7 +31,6 @@ xmap { S{
 xmap ( S(
 
 " Toggle paste mode
-" set pastetoggle=<F2>
 map <leader>pp :setlocal paste!<cr>
 
 " x does not overwrite yank buffer
@@ -47,8 +48,9 @@ nmap <F8> :TagbarToggle<CR>
 " Fast save
 nmap <leader>w :w!<cr>
 
-" Fast quit
+" Fast quit and disable Ex mode along the way
 nmap <leader>q :qa!<cr>
+nnoremap Q :q<cr>
 
 " Open and source nvim config
 nmap <Leader>v :e ~/.config/nvim/init.vim<CR>
@@ -61,20 +63,11 @@ nmap j gj
 " Do not show stupid q: window
 map q: :q
 
-" Backtick to toggle folds, tilde to close all
-" nnoremap ` za
-" vnoremap ` za
-" nnoremap ~ zM
-" vnoremap ~ zM
-
 " Enable jumping in insert mode
 inoremap <C-l> <Esc>$a
 
 " Make Y not dumb
 nnoremap Y y$
-
-" Disable Ex mode
-nnoremap Q <nop>
 
 " Search centers result
 nnoremap n nzzzv
@@ -91,20 +84,17 @@ nnoremap <C-h> <C-w><C-h>
 
 " Enable key mapping for moving lines up and down, somehow need to be the last
 " entry in keymaps
-nnoremap <silent> <down> :m .+1<CR>==
-nnoremap <silent> <up> :m .-2<CR>==
-inoremap <silent> <down> <Esc>:m .+1<CR>==gi
-inoremap <silent> <up> <Esc>:m .-2<CR>==gi
-vnoremap <silent> <down> :m '>+1<CR>gv=gv
-vnoremap <silent> <up> :m '<-2<CR>gv=gv
+nnoremap <silent> <C-down> :m .+1<CR>==
+nnoremap <silent> <C-up> :m .-2<CR>==
+inoremap <silent> <C-down> <Esc>:m .+1<CR>==gi
+inoremap <silent> <C-up> <Esc>:m .-2<CR>==gi
+vnoremap <silent> <C-down> :m '>+1<CR>gv=gv
+vnoremap <silent> <C-up> :m '<-2<CR>gv=gv
 
 " Quickfix for TO-DOs and FIX-MEs
-nmap <Leader>t :Ag \(TODO\\|FIXME\) .<CR>
+nmap <Leader>t :Ag \(TODO\\|FIXME\) .<cr>
 
-" open ag.vim
-nnoremap <leader>a :Ag
-
-" ===
+" Navigate the quicklist easily
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
