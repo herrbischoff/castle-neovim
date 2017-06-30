@@ -39,17 +39,16 @@
 
 Plug 'JulesWang/css.vim'
 Plug 'Quramy/tsuquyomi'
-Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'davidoc/taskpaper.vim'
 Plug 'fatih/vim-go'
 Plug 'gko/vim-coloresque'
 Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
-Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'sheerun/vim-polyglot'
 Plug 'slashmili/alchemist.vim'
 Plug 'ternjs/tern_for_vim'
-Plug 'tobyS/pdv', { 'for': 'php' }
-Plug 'tobyS/vmustache', { 'for': 'php' }
+" Plug 'tobyS/pdv', { 'for': 'php' }
+" Plug 'tobyS/vmustache', { 'for': 'php' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }

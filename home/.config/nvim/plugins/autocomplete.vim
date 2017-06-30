@@ -13,6 +13,8 @@
 " Plug 'Valodim/vim-zsh-completion', { 'for': 'zsh' }
 " Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
 " Plug 'davidhalter/jedi-vim'
+" Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+" Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
 " Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 " Plug 'roxma/nvim-cm-tern',  {'do': 'yarn install'}
 " Plug 'roxma/nvim-completion-manager'
@@ -24,6 +26,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn install' }
 Plug 'honza/vim-snippets'
-Plug 'padawan-php/deoplete-padawan', { 'for': 'php' }
+" Plug 'shawncplus/phpcomplete.vim'
 Plug 'zchee/deoplete-docker', { 'for': 'docker' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }

@@ -31,3 +31,5 @@ source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/autocommands.vim
 source $HOME/.config/nvim/mappings.vim
+
+let g:LanguageClient_autoStart = 1
