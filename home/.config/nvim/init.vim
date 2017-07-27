@@ -25,6 +25,7 @@ call plug#end()
 
 filetype plugin indent on " Enable filetype detection, allow indentation and syntax be set byt plugins
 syntax enable " Enable syntax processing
+" syntax off
 
 source $HOME/.config/nvim/plugin-settings.vim
 source $HOME/.config/nvim/settings.vim
