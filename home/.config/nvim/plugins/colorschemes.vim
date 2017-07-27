@@ -8,3 +8,4 @@
 Plug 'junegunn/seoul256.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'herrbischoff/cobalt2.vim'
+Plug 'herrbischoff/oceanic-next-mnml'
