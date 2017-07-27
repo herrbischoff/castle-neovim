@@ -11,7 +11,6 @@ scriptencoding utf-8
 " Airline {{{
 
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='bubblegum'
 let g:airline_theme='oceanicnext'
 
 if !exists('g:airline_symbols')
@@ -225,9 +224,9 @@ let g:multi_cursor_exit_from_visual_mode = 0
 " }}}
 " NerdTree {{{
 
-" map - :NERDTreeToggle<CR>
-" let g:NERDTreeDirArrowExpandable  = '▸'
-" let g:NERDTreeDirArrowCollapsible = '▾'
+map - :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable  = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " }}}
 " pdv {{{
