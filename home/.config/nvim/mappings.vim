@@ -12,6 +12,7 @@ let mapleader = "\<Space>"
 
 " Remove search highlight
 nnoremap <silent> <ESC><ESC> :noh<CR>
+nmap <silent> <BS> :noh<CR>
 
 " Sane mouse scrolling
 map <ScrollWheelUp> <C-Y>
@@ -51,6 +52,7 @@ nmap <leader>w :w!<cr>
 " Fast quit and disable Ex mode along the way
 nmap <leader>q :qa!<cr>
 nnoremap Q :q<cr>
+noremap <C-q> :confirm qall<CR>
 
 " Open and source nvim config
 nmap <Leader>v :e ~/.config/nvim/init.vim<CR>
@@ -103,3 +105,12 @@ map <leader>ss :setlocal spell!<cr>
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Global search and replace
+" Do the search: /pattern<CR> then replace all the matches: Mreplacement<CR>
+nmap S :%s//g<LEFT><LEFT>
+nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
