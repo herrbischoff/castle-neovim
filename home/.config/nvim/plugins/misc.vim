@@ -23,7 +23,6 @@
 " Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " Plug 'reedes/vim-wheel'
 " Plug 'ryanoasis/vim-devicons'
-" Plug 'scrooloose/nerdtree/', { 'on': 'NERDTreeToggle' }
 " Plug 'sjl/gundo.vim'
 " Plug 'skammer/vim-css-color'
 " Plug 'tobyS/vmustache'
@@ -37,6 +36,7 @@
 " Plug 'xolox/vim-misc'
 " Plug 'xolox/vim-session'
 
+Plug 'scrooloose/nerdtree/', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
