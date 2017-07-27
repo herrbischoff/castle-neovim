@@ -52,3 +52,4 @@ Plug 'ternjs/tern_for_vim'
 " Plug 'tobyS/pdv', { 'for': 'php' }
 " Plug 'tobyS/vmustache', { 'for': 'php' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'evidens/vim-twig'
