@@ -33,5 +33,6 @@ augroup filetypes
 augroup END
 
 augroup configgroup
-    autocmd VimResized * exe 'normal! \<c-w>=' " automatically resize panes on resize
+    " automatically resize panes on resize
+    autocmd VimResized * exe 'normal! \<c-w>='
 augroup END
