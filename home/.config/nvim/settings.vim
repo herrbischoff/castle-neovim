@@ -87,6 +87,7 @@ set background=dark
 set breakindent
 set colorcolumn=80 " Make a mark for column 80
 set copyindent " copy the previous indentation on autoindenting
+set clipboard=unnamed
 set nocursorline
 set diffopt+=vertical
 set expandtab " use spaces instead of tabs
@@ -98,6 +99,7 @@ set foldmethod=indent " fold based on indent level
 set gdefault
 set hlsearch " highlight searches by default
 set ignorecase
+set inccommand=nosplit
 set incsearch " find the next match as we type the search
 set laststatus=2
 set lazyredraw
@@ -138,6 +140,7 @@ set wrapscan
 
 " let g:seoul256_background = 236
 " colorscheme seoul256
+" colorscheme OceanicNextMnml
 colorscheme OceanicNext
 
 " Enable italics
