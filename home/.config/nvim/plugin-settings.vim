@@ -59,6 +59,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {
 \   'html': ['htmlhint'],
 \   'javascript': ['eslint'],
+\   'stylus': [''],
 \   'vim': ['vint']
 \}
 
@@ -304,8 +305,6 @@ nmap t <Plug>(easymotion-t2)
 " vim-indent-guides {{{
 
 let g:indent_guides_enable_on_vim_startup = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#2D353D
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#343D46
 
 " }}}
 " vim-plug {{{

@@ -81,9 +81,8 @@ if (has('gui_macvim'))
     set guicursor=a:blinkon0
 endif
 
-set t_Co=256
+" set t_Co=256
 set autoindent " autoindent based on line above, works most of the time
-set background=dark
 set breakindent
 set colorcolumn=80 " Make a mark for column 80
 set copyindent " copy the previous indentation on autoindenting
@@ -142,10 +141,11 @@ set wrapscan
 " colorscheme seoul256
 " colorscheme OceanicNextMnml
 colorscheme OceanicNext
+set background=dark
 
 " Enable italics
-" highlight Comment gui=italic
-" highlight Comment cterm=italic
+highlight Comment gui=italic
+highlight Comment cterm=italic
 " set t_ZH=[3m
 " set t_ZR=[23m
 

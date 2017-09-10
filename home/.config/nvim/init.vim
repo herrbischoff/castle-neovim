@@ -34,3 +34,20 @@ source $HOME/.config/nvim/autocommands.vim
 source $HOME/.config/nvim/mappings.vim
 
 let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'php': ['php vendor/felixfbecker/language-server/bin/php-language-server.php'],
+    \ }
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
+nnoremap <silent> <F3> :IndentGuidesEnable<CR>
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2D353D   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#343D46 ctermbg=4
+
+" hi IndentGuidesOdd guibg=#2D353D
+" hi IndentGuidesEven guibg=#343D46

@@ -14,6 +14,7 @@
 " Plug 'mattn/emmet-vim', { 'for': 'html' }
 " Plug 'nelstrom/vim-visual-star-search'
 " Plug 's3rvac/AutoFenc'
+" Plug 'jsfaint/gen_tags.vim'
 
 Plug 'Shougo/echodoc.vim'
 Plug 'easymotion/vim-easymotion'
@@ -22,3 +23,4 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tyru/caw.vim'
 Plug 'w0rp/ale'
+Plug 'mhinz/vim-signify'
