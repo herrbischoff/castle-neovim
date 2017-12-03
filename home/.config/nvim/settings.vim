@@ -144,15 +144,16 @@ colorscheme OceanicNext
 set background=dark
 
 " Enable italics
-highlight Comment gui=italic
-highlight Comment cterm=italic
+" highlight Comment gui=italic
+" highlight Comment cterm=italic
 " set t_ZH=[3m
 " set t_ZR=[23m
 
 " Make background transparent
 if (has('nvim'))
-  highlight Normal guibg=none ctermbg=none
-  highlight NonText guibg=none ctermbg=none
+    highlight Normal guibg=none ctermbg=none
+    highlight NonText guibg=none ctermbg=none
+    highlight SignColumn guibg=none ctermbg=none
 else
     highlight Normal ctermbg=none
     highlight NonText ctermbg=none

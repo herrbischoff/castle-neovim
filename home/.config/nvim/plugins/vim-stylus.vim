@@ -1,0 +1,1 @@
+Plug 'wavded/vim-stylus'

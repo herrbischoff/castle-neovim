@@ -24,13 +24,6 @@ map <S-ScrollWheelDown> <C-D>
 noremap <Leader>, :bp<CR>
 noremap <Leader>. :bn<CR>
 
-" surround.vim mappings
-xmap ' S'
-xmap " S"
-xmap [ S[
-xmap { S{
-xmap ( S(
-
 " Toggle paste mode
 map <leader>pp :setlocal paste!<cr>
 
@@ -42,9 +35,6 @@ nnoremap <silent> <F4> :StripWhitespace<CR>
 
 " Sort
 vnoremap <silent> <F5> :sort<CR>
-
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
 
 " Fast save
 nmap <leader>w :w!<cr>
