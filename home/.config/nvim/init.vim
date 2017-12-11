@@ -11,11 +11,11 @@ scriptencoding utf-8
 
 set shell=/bin/sh
 
-let g:os=substitute(system('uname'), '\n', '', '')
+" let g:os=substitute(system('uname'), '\n', '', '')
 
 call plug#begin()
-    for rcfile in split(globpath("~/.config/nvim/plugins", "*.vim"), '\n')
-        execute('source '.rcfile)
+    for g:rcfile in split(globpath('~/.config/nvim/plugins', '*.vim'), '\n')
+        execute('source '.g:rcfile)
     endfor
 call plug#end()
 
