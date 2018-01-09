@@ -27,4 +27,4 @@ source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/autocommands.vim
 source $HOME/.config/nvim/mappings.vim
 
-let g:plug_window = 'above 25new'
+let g:plug_window = 'enew'
