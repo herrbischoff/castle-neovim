@@ -30,6 +30,7 @@ augroup filetypes
     autocmd FileType vue syntax sync fromstart " Make sure Vue files are correctly highlighted
 
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal ft=markdown
+    autocmd BufNewFile,BufRead *.js setlocal ft=javascript
 augroup END
 
 augroup configgroup
