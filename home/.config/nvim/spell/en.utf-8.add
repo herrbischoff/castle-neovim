@@ -6,3 +6,13 @@ PHP
 Neovim
 Plugins
 plugins
+uninstall
+#ppArmor
+AppArmor/!
+AppArmor
+ACPI
+PCI
+AES
+AMD
+AVX
+DMA
