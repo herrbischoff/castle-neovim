@@ -112,3 +112,6 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
     \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
     \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
+
+map T :vsplit term://fish<cr>i
+tnoremap <Esc> <C-\><C-n>

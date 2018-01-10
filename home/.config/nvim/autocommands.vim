@@ -36,4 +36,7 @@ augroup END
 augroup configgroup
     " automatically resize panes on resize
     autocmd VimResized * exe 'normal! \<c-w>='
+
+    " Set Terminal statusline
+    autocmd TermOpen * setlocal statusline=%{b:term_title}
 augroup END
