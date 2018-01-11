@@ -3,7 +3,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Settings
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_theme='oceanicnext'
 
 if !exists('g:airline_symbols')
