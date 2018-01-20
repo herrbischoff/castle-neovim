@@ -31,6 +31,7 @@ augroup filetypes
 
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal ft=markdown
     autocmd BufNewFile,BufRead *.js setlocal ft=javascript
+    autocmd BufNewFile,BufRead *.fish setlocal ft=fish
 augroup END
 
 augroup configgroup
