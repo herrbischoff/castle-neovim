@@ -141,7 +141,7 @@ set wrapscan
 " colorscheme seoul256
 " colorscheme OceanicNextMnml
 colorscheme OceanicNext
-set background=dark
+" set background=dark
 
 " Enable italics
 " highlight Comment gui=italic
@@ -151,9 +151,10 @@ set background=dark
 
 " Make background transparent
 if (has('nvim'))
-    highlight Normal guibg=none ctermbg=none
-    highlight NonText guibg=none ctermbg=none
-    highlight SignColumn guibg=none ctermbg=none
+    highlight Normal guibg=none ctermbg=none gui=none
+    highlight NonText guibg=none ctermbg=none gui=none
+    highlight SignColumn guibg=none ctermbg=none gui=none
+    highlight EndOfBuffer guibg=none ctermbg=none gui=none
 else
     highlight Normal ctermbg=none
     highlight NonText ctermbg=none
