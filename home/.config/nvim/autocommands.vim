@@ -30,6 +30,10 @@ augroup filetypes
     " Make sure Vue files are correctly highlighted
     autocmd FileType vue syntax sync fromstart
 
+    " Make folding work as expected
+    " autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+    " autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
+
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal ft=markdown
     autocmd BufNewFile,BufRead *.js setlocal ft=javascript
     autocmd BufNewFile,BufRead *.fish setlocal ft=fish
