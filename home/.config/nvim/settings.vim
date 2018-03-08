@@ -76,7 +76,8 @@ set writebackup
 " MacVim
 if (has('gui_macvim'))
     set linespace=2 " Set line spacing
-    set guifont=Operator\ Mono\ Book\ for\ Powerline:h14
+    " set guifont=Operator\ Mono\ Book\ for\ Powerline:h14
+    set guifont=Fira\ Code:h14
     set guioptions-=r
     set guicursor=a:blinkon0
 endif
@@ -136,6 +137,7 @@ set wrap
 set wrapmargin=0
 set tagcase=followscs " Follow smartcase and ignorecase when doing tag search
 set wrapscan
+set grepprg=rg\ --vimgrep
 
 " let g:seoul256_background = 236
 " colorscheme seoul256
@@ -150,7 +152,7 @@ colorscheme OceanicNext
 " set t_ZR=[23m
 
 " Make background transparent
-if (has('nvim'))
+if (has('nvim') && !has("gui_vimr"))
     highlight Normal guibg=none ctermbg=none gui=none
     highlight NonText guibg=none ctermbg=none gui=none
     highlight SignColumn guibg=none ctermbg=none gui=none
