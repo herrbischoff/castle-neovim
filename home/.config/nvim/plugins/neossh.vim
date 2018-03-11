@@ -1,1 +1,0 @@
-Plug 'Shougo/neossh.vim'
