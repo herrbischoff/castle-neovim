@@ -1,1 +1,1 @@
-Plug 'gko/vim-coloresque'
+Plug 'gko/vim-coloresque', { 'for': ['css', 'less', 'sass', 'html', 'vue'] }
