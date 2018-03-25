@@ -1,1 +1,1 @@
-Plug 'evidens/vim-twig'
+Plug 'evidens/vim-twig', { 'for': 'html.twig' }
