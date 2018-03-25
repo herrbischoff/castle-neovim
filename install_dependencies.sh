@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 py_apps=(
     "python-language-server"
@@ -19,20 +19,20 @@ js_apps=(
     "vue-language-server"
 )
 
-echo "\nInstallation of development dependencies"
+echo -e "\nInstallation of development dependencies"
 
 # Python
-echo "\nPython:"
+echo -e "\nPython:"
 for i in "${py_apps[@]}"
 do
-    echo "\t$i"
+    echo -e "\t$i"
 done
 
 # JavaScript
-echo "\nJavaScript:"
+echo -e "\nJavaScript:"
 for i in "${js_apps[@]}"
 do
-    echo "\t$i"
+    echo -e "\t$i"
 done
 
 echo
