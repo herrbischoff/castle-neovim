@@ -1,1 +1,1 @@
-Plug 'moll/vim-node'
+Plug 'moll/vim-node', { 'for': 'javascript' }
