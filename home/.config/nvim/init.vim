@@ -11,7 +11,11 @@ scriptencoding utf-8
 
 set shell=/bin/sh
 
-" let g:os=substitute(system('uname'), '\n', '', '')
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin()
     for g:rcfile in split(globpath('~/.config/nvim/plugins', '*.vim'), '\n')
