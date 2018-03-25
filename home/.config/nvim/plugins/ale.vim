@@ -6,10 +6,8 @@ let g:ale_set_quickfix = 1
 let g:airline#extensions#ale#enabled = 1
 " let g:ale_lint_on_text_changed = 'normal'
 let g:ale_linters = {
-\   'html': ['htmlhint'],
 \   'javascript': ['eslint', 'flow'],
-\   'stylus': [''],
-\   'vim': ['vint']
+\   'stylus': ['']
 \}
 
 let g:ale_statusline_format = ['X %d', '? %d', '']
