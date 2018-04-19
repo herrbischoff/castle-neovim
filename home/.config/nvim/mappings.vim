@@ -34,12 +34,6 @@ map <leader>pp :setlocal paste!<cr>
 " x does not overwrite yank buffer
 nnoremap x "_x
 
-" Fix whitespace
-nnoremap <silent> <F4> :StripWhitespace<CR>
-
-" Sort
-vnoremap <silent> <F5> :sort<CR>
-
 " Fast save
 nmap <leader>w :w!<cr>
 
@@ -103,10 +97,6 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 nmap S :%s//g<LEFT><LEFT>
 nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
 
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-    \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-    \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
 " Ctrl-Space for completions. Heck Yeah!
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
     \ "\<lt>C-n>" :
@@ -117,3 +107,25 @@ imap <C-@> <C-Space>
 
 map T :vsplit term://fish<cr>i
 tnoremap <Esc> <C-\><C-n>
+
+
+"
+" FUNCTION KEYS
+"
+
+" F2 - Rename object
+" Used by LanguageServer
+
+" F4 - Fix whitespace
+nnoremap <silent> <F4> :StripWhitespace<CR>
+
+" F5 - Sort
+vnoremap <silent> <F5> :sort<CR>
+
+" F9 - Run script
+nnoremap <F9> :split term://node %<CR>
+
+" F10 - Show text objects
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+    \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+    \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
