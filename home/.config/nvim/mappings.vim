@@ -8,7 +8,7 @@ scriptencoding utf-8
 "                |__|  |__|           |_____|
 "
 
-let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 " Remove search highlight
 nnoremap <silent> <ESC><ESC> :noh<CR>
@@ -44,9 +44,8 @@ nmap <leader>q :qa!<cr>
 nnoremap Q :q<cr>
 noremap <C-q> :confirm qall<CR>
 
-" Open and source nvim config
+" Open nvim config
 nmap <Leader>v :e ~/.config/nvim/init.vim<CR>
-nmap <Leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Let's be reasonable, shall we? Move vertically by visual line
 nmap k gk
@@ -74,8 +73,7 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
-" Enable key mapping for moving lines up and down, somehow need to be the last
-" entry in keymaps
+" Enable key mapping for moving lines up and down
 nnoremap <silent> <C-down> :m .+1<CR>==
 nnoremap <silent> <C-up> :m .-2<CR>==
 inoremap <silent> <C-down> <Esc>:m .+1<CR>==gi
