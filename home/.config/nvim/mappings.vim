@@ -24,6 +24,10 @@ map <S-ScrollWheelDown> <C-D>
 noremap <Leader>, :bp<CR>
 noremap <Leader>. :bn<CR>
 
+" Close buffer
+noremap ∑ :bd<CR>
+noremap „ :bd!<CR>
+
 " Toggle paste mode
 map <leader>pp :setlocal paste!<cr>
 
