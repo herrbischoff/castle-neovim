@@ -1,11 +1,7 @@
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'do': ':UpdateRemotePlugins',
-    \ 'for': [
-        \ 'javascript',
-        \ 'javascript.jsx',
-        \ 'python',
-        \ 'vue'
-    \ ] }
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh'
+    \ }
 
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
@@ -29,5 +25,5 @@ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
-autocmd FileType javascript nnoremap <buffer>
+autocmd FileType javascript,python nnoremap <buffer>
     \ <leader>lf :call LanguageClient_textDocument_documentSymbol()<cr>
