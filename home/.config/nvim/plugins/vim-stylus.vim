@@ -1,1 +1,2 @@
-Plug 'wavded/vim-stylus'
+" Plug 'wavded/vim-stylus'
+Plug 'iloginow/vim-stylus'
