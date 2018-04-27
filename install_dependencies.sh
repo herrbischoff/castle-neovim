@@ -44,6 +44,6 @@ read -p "Press any key to install or Ctrl-C to abort..."
 pip install "${py_pkg[@]}"
 
 # JavaScript
-yarn global add "${js_pkg[@]}"
+npm -g install "${js_pkg[@]}"
 
 echo "Done."
