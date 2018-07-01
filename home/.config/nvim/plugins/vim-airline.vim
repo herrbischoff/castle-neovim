@@ -1,6 +1,6 @@
 " Plugin
 Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 
 " Settings
 let g:airline_powerline_fonts = 0

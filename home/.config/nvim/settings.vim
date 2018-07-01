@@ -151,6 +151,11 @@ colorscheme OceanicNext
 " set t_ZH=[3m
 " set t_ZR=[23m
 
+" VimR
+if (has("gui_vimr"))
+    let g:python3_host_prog = '/usr/local/bin/python3'
+endif
+
 " Make background transparent
 if (has('nvim') && !has("gui_vimr"))
     highlight Normal guibg=none ctermbg=none gui=none
