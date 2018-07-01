@@ -80,7 +80,7 @@ vnoremap <silent> <C-down> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-up> :m '<-2<CR>gv=gv
 
 " Quickfix for TO-DOs and FIX-MEs
-nmap <Leader>t :Ag \(TODO\\|FIXME\) .<cr>
+nmap <Leader>t :Rg \(TODO\\|FIXME\) .<cr>
 
 " Navigate the quicklist easily
 map <leader>n :cn<cr>
