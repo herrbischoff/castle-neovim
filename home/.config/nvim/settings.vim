@@ -142,8 +142,9 @@ set grepprg=rg\ --vimgrep
 " let g:seoul256_background = 236
 " colorscheme seoul256
 " colorscheme OceanicNextMnml
-colorscheme OceanicNext
-" set background=dark
+" colorscheme OceanicNext
+colorscheme gruvbox
+set background=dark
 
 " Enable italics
 " highlight Comment gui=italic
@@ -157,12 +158,12 @@ if (has("gui_vimr"))
 endif
 
 " Make background transparent
-if (has('nvim') && !has("gui_vimr"))
-    highlight Normal guibg=none ctermbg=none gui=none
-    highlight NonText guibg=none ctermbg=none gui=none
-    highlight SignColumn guibg=none ctermbg=none gui=none
-    highlight EndOfBuffer guibg=none ctermbg=none gui=none
-else
-    highlight Normal ctermbg=none
-    highlight NonText ctermbg=none
-endif
+" if (has('nvim') && !has("gui_vimr"))
+"     highlight Normal guibg=none ctermbg=none gui=none
+"     highlight NonText guibg=none ctermbg=none gui=none
+"     highlight SignColumn guibg=none ctermbg=none gui=none
+"     highlight EndOfBuffer guibg=none ctermbg=none gui=none
+" else
+"     highlight Normal ctermbg=none
+"     highlight NonText ctermbg=none
+" endif

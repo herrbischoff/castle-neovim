@@ -47,3 +47,13 @@ augroup configgroup
     " Set Terminal statusline
     autocmd TermOpen * setlocal statusline=%{b:term_title}
 augroup END
+
+augroup VimCSS3Syntax
+  autocmd!
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
+
+augroup csscomplete
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
+augroup END

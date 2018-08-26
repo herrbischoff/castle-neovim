@@ -80,7 +80,10 @@ vnoremap <silent> <C-down> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-up> :m '<-2<CR>gv=gv
 
 " Quickfix for TO-DOs and FIX-MEs
-nmap <Leader>t :Rg \(TODO\\|FIXME\) .<cr>
+nmap <Leader>t :Rg '\(TODO\\|FIXME\)'<cr>
+
+" Search in all files
+nmap <Leader>r :Rg<cr>
 
 " Navigate the quicklist easily
 map <leader>n :cn<cr>
@@ -120,7 +123,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <silent> <F4> :StripWhitespace<CR>
 
 " F5 - Sort
-vnoremap <silent> <F5> :sort<CR>
+vnoremap <silent> <F5> :sort i<CR>
 
 " F9 - Run script
 nnoremap <F9> :split term://node %<CR>

@@ -4,7 +4,8 @@ Plug 'bling/vim-airline'
 
 " Settings
 let g:airline_powerline_fonts = 0
-let g:airline_theme='oceanicnext'
+" let g:airline_theme='oceanicnext'
+let g:airline_theme='gruvbox'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}

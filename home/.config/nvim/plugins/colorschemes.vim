@@ -1,2 +1,5 @@
 Plug 'mhartington/oceanic-next'
 Plug 'whatyouhide/vim-gotham'
+Plug 'jacoborus/tender.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'morhetz/gruvbox'
