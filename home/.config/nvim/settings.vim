@@ -51,7 +51,7 @@ set ttimeoutlen=10
 
 " Better Completion
 " set complete=.,w,b,u,t
-set completeopt=longest,menuone
+" set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
 
 set nobackup
@@ -84,9 +84,9 @@ endif
 
 " set t_Co=256
 set autoindent " autoindent based on line above, works most of the time
-set breakindent
+" set breakindent
 set colorcolumn=80 " Make a mark for column 80
-set copyindent " copy the previous indentation on autoindenting
+" set copyindent " copy the previous indentation on autoindenting
 set clipboard=unnamed
 set nocursorline
 set diffopt+=vertical
@@ -122,9 +122,9 @@ set showmatch
 set smartcase
 " set smartindent " smarter indent for C-like languages
 set noshiftround
-set nopreserveindent
+" set nopreserveindent
 set smarttab
-set nosmartindent
+" set nosmartindent
 set tabstop=4
 set softtabstop=4 " in insert mode, tabs are 4 spaces
 set splitbelow

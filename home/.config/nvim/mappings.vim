@@ -97,8 +97,8 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Global search and replace
 " Do the search: /pattern<CR> then replace all the matches: Mreplacement<CR>
-nmap S :%s//g<LEFT><LEFT>
-nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
+" nmap S :%s//g<LEFT><LEFT>
+" nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
 
 " Ctrl-Space for completions. Heck Yeah!
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?

@@ -17,14 +17,10 @@ let g:ale_linters = {
 \   'vue': ['eslint', 'vls'],
 \   'scss': ['stylelint'],
 \}
-" let g:ale_linter_aliases = {'vue': ['javascript', 'css']}
-" let b:ale_fixers = {
-" \   'vim': ['trim_whitespace', 'remove_trailing_lines'],
-" \   'vue': ['eslint'],
-" \}
-
-" let g:ale_linter_aliases = {'vue': 'scss'}
-let g:ale_linter_aliases = {'vue': ['css']}
+let b:ale_fixers = {
+\   'vim': ['trim_whitespace', 'remove_trailing_lines'],
+\   'vue': ['eslint'],
+\}
 
 let g:ale_fix_on_save = 1
 let g:ale_statusline_format = ['X %d', '? %d', '']

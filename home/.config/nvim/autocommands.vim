@@ -16,7 +16,8 @@ augroup filetypes
     autocmd FileType gitcommit,markdown,mail setlocal spell formatoptions+=w
     autocmd FileType html setlocal ts=2 sts=2 sw=2
     autocmd FileType jade,pug setlocal ts=2 sts=2 sw=2
-    autocmd FileType javascript,json setlocal ts=2 sts=2 sw=2
+    " autocmd FileType javascript,json setlocal ts=2 sts=2 sw=2
+    autocmd FileType javascript,json setlocal ts=4 sts=4 sw=4
     autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
     " autocmd FileType markdown setlocal ts=4 sts=4 sw=4 textwidth=0 wrapmargin=0 wrap spell formatoptions+=l
     autocmd FileType markdown setlocal ts=4 sts=4 sw=4 spell wrap linebreak nolist textwidth=79 formatoptions+=t
@@ -49,11 +50,22 @@ augroup configgroup
 augroup END
 
 augroup VimCSS3Syntax
-  autocmd!
-  autocmd FileType css setlocal iskeyword+=-
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
 augroup END
 
 augroup csscomplete
-  autocmd!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
+    autocmd!
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
+augroup END
+
+augroup refresheditor
+    " Trigger `autoread` when files changes on disk
+    " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+    " https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+    autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+    " Notification after file change
+    " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+    autocmd FileChangedShellPost *
+      \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 augroup END

@@ -1,1 +1,1 @@
-Plug 'dNitro/vim-pug-complete'
+" Plug 'dNitro/vim-pug-complete'
