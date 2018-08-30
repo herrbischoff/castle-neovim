@@ -40,3 +40,7 @@ let g:plug_window = 'enew'
 " Enable project-specific vimrc
 " set exrc
 " set secure
+
+" Current project settings for Webpack aliases
+set includeexpr=substitute(substitute(v:fname,'^\\~\/','resources/assets/js/',''),'^\\~sass/\\(.*\\)/\\(.*\\)$','resources/assets/sass/\\1/_\\2','')
+set suffixesadd=.js,.vue,.scss
