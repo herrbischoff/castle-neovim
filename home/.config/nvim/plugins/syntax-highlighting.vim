@@ -40,3 +40,6 @@ Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 
 " tmux
 Plug 'keith/tmux.vim'
+
+" Typescript
+Plug 'leafgarland/typescript-vim'
