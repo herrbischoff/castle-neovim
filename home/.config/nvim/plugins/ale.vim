@@ -14,14 +14,16 @@ let g:airline#extensions#ale#enabled = 1
 " let g:ale_lint_on_text_changed = 'normal'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'vue': ['eslint', 'vls'],
+\   'vue': ['stylelint', 'eslint'],
 \   'scss': ['stylelint'],
 \}
 let b:ale_fixers = {
+\   'js': ['eslint'],
 \   'vim': ['trim_whitespace', 'remove_trailing_lines'],
 \   'vue': ['eslint'],
 \}
 
+let g:ale_linter_aliases =  {'vue': ['javascript', 'scss']}
 let g:ale_fix_on_save = 1
 let g:ale_statusline_format = ['X %d', '? %d', '']
 " %linter% is the name of the linter that provided the message

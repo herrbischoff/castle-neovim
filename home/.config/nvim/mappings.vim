@@ -21,15 +21,15 @@ map <ScrollWheelDown> <C-E>
 map <S-ScrollWheelDown> <C-D>
 
 " map <leader>, and <leader>. to buffer prev/next buffer
-noremap <Leader>, :bp<CR>
-noremap <Leader>. :bn<CR>
+noremap <silent> <Leader>, :bp<CR>
+noremap <silent> <Leader>. :bn<CR>
 
 " Close buffer
 noremap ∑ :bd<CR>
 noremap „ :bd!<CR>
 
-" Toggle paste mode
-map <leader>pp :setlocal paste!<cr>
+" Toggle paste mode (Alt-p)
+map π :setlocal paste!<cr>
 
 " x does not overwrite yank buffer
 nnoremap x "_x
@@ -46,8 +46,8 @@ noremap <C-q> :confirm qall<CR>
 nmap <Leader>v :e ~/.config/nvim/init.vim<CR>
 
 " Let's be reasonable, shall we? Move vertically by visual line
-nmap k gk
-nmap j gj
+nmap <silent> k gk
+nmap <silent> j gj
 
 " Do not show stupid q: window
 map q: :q
@@ -79,18 +79,15 @@ inoremap <silent> <C-up> <Esc>:m .-2<CR>==gi
 vnoremap <silent> <C-down> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-up> :m '<-2<CR>gv=gv
 
-" Quickfix for TO-DOs and FIX-MEs
-nmap <Leader>t :Rg '\(TODO\\|FIXME\)'<cr>
-
-" Search in all files
-nmap <Leader>r :Rg<cr>
+" Quickfix for TO-DOs, FIX-MEs and XXXs (Alt-t)
+nmap † :Rg TODO\|FIXME\|XXX<cr>
 
 " Navigate the quicklist easily
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
-" Spell checking
-map <leader>ss :setlocal spell!<cr>
+" Spell checking (Alt-s)
+map ß :setlocal spell!<cr>
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -111,6 +108,8 @@ imap <C-@> <C-Space>
 map T :vsplit term://fish<cr>i
 tnoremap <Esc> <C-\><C-n>
 
+" Open Task list
+map <leader>t :e ~/.taskpaper/current.taskpaper<cr>
 
 "
 " FUNCTION KEYS
@@ -126,7 +125,7 @@ nnoremap <silent> <F4> :StripWhitespace<CR>
 vnoremap <silent> <F5> :sort i<CR>
 
 " F9 - Run script
-nnoremap <F9> :split term://node %<CR>
+" nnoremap <F9> :split term://node %<CR>
 
 " F10 - Show text objects
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

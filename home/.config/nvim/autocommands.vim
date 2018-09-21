@@ -16,8 +16,8 @@ augroup filetypes
     autocmd FileType gitcommit,markdown,mail setlocal spell formatoptions+=w
     autocmd FileType html setlocal ts=2 sts=2 sw=2
     autocmd FileType jade,pug setlocal ts=2 sts=2 sw=2
-    " autocmd FileType javascript,json setlocal ts=2 sts=2 sw=2
-    autocmd FileType javascript,json setlocal ts=4 sts=4 sw=4
+    autocmd FileType javascript,json setlocal ts=2 sts=2 sw=2
+    " autocmd FileType javascript,json setlocal ts=4 sts=4 sw=4
     autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
     " autocmd FileType markdown setlocal ts=4 sts=4 sw=4 textwidth=0 wrapmargin=0 wrap spell formatoptions+=l
     autocmd FileType markdown setlocal ts=4 sts=4 sw=4 spell wrap linebreak nolist textwidth=79 formatoptions+=t
@@ -46,7 +46,9 @@ augroup configgroup
     autocmd VimResized * exe 'normal! \<c-w>='
 
     " Set Terminal statusline
-    autocmd TermOpen * setlocal statusline=%{b:term_title}
+    if has('nvim')
+        autocmd TermOpen * setlocal statusline=%{b:term_title}
+    endif
 augroup END
 
 augroup VimCSS3Syntax
