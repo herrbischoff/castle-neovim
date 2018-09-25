@@ -8,19 +8,17 @@ let g:LanguageClient_autoStart = 1
 
 let g:LanguageClient_serverCommands = {}
 let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
-    \ 'php': ['php', globpath(&rtp,'vendor/felixfbecker/language-server/bin/php-language-server.php',1)],
-    \ 'python': ['pyls'],
-    \ 'vue': ['vls']
-    \ }
+   \ 'javascript': ['javascript-typescript-stdio'],
+   \ 'python': ['pyls'],
+   \ 'vue': ['vls']
+   \ }
 
 " Use LanguageServer for omnifunc completion
 autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
-autocmd FileType javascript.jsx setlocal omnifunc=LanguageClient#complete
-autocmd FileType php setlocal omnifunc=LanguageClient#complete
+autocmd FileType python setlocal omnifunc=LanguageClient#complete
 autocmd FileType vue setlocal omnifunc=LanguageClient#complete
 
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
