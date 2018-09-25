@@ -18,7 +18,9 @@ let g:vue_disable_pre_processors=1
 Plug 'lumiliet/vim-twig', { 'for': 'html.twig' }
 
 " JavaScript
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'vue'] }
+" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'vue'] }
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'typescript', 'vue'] }
+Plug 'jason0x43/vim-js-indent', { 'for': ['javascript', 'typescript', 'vue'] }
 
 " CSS
 Plug 'JulesWang/css.vim'
@@ -42,4 +44,4 @@ Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'keith/tmux.vim'
 
 " Typescript
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
