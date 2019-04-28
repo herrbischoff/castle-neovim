@@ -42,7 +42,7 @@ let g:plug_window = 'enew'
 " set secure
 
 " Current project settings for Webpack aliases
-set includeexpr=substitute(substitute(v:fname,'^\\~\/','resources/assets/js/',''),'^\\~sass/\\(.*\\)/\\(.*\\)$','resources/assets/sass/\\1/_\\2','')
-set suffixesadd=.js,.vue,.scss
+" set includeexpr=substitute(substitute(v:fname,'^\\~\/','resources/assets/js/',''),'^\\~sass/\\(.*\\)/\\(.*\\)$','resources/assets/sass/\\1/_\\2','')
+" set suffixesadd=.js,.vue,.scss
 
 silent! so .vimlocal

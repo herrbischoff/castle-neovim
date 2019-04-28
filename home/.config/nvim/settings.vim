@@ -75,17 +75,17 @@ set writebackup
 
 " MacVim
 if (has('gui_macvim'))
-    set linespace=2 " Set line spacing
-    " set guifont=Operator\ Mono\ Book\ for\ Powerline:h14
-    set guifont=Iosevka\ Term:h15
+    " set linespace=2 " Set line spacing
+    set guifont=Operator\ Mono\ Book:h14
+    " set guifont=Iosevka\ Term:h15
     set guioptions=
     set guicursor=a:blinkon0
+    set t_Co=256
 endif
 
-" set t_Co=256
 set autoindent " autoindent based on line above, works most of the time
 " set breakindent
-set colorcolumn=80 " Make a mark for column 80
+set colorcolumn=80,100 " Make a mark for column 80
 " set copyindent " copy the previous indentation on autoindenting
 set clipboard=unnamed
 set cursorline
@@ -131,9 +131,6 @@ set tabstop=4
 set softtabstop=4 " in insert mode, tabs are 4 spaces
 set splitbelow
 set splitright
-if (has("termguicolors"))
-  set termguicolors
-endif
 set textwidth=0 " turn off hard word wrapping
 set wrap
 set wrapmargin=0
@@ -145,7 +142,7 @@ set grepprg=rg\ --vimgrep
 " colorscheme seoul256
 " colorscheme OceanicNextMnml
 " colorscheme OceanicNext
-colorscheme gruvbox
+colorscheme solarized8
 set background=dark
 
 " Enable italics
@@ -166,6 +163,9 @@ endif
 "     highlight SignColumn guibg=none ctermbg=none gui=none
 "     highlight EndOfBuffer guibg=none ctermbg=none gui=none
 " else
-"     highlight Normal ctermbg=none
-"     highlight NonText ctermbg=none
+    highlight Normal ctermbg=none
+    highlight NonText ctermbg=none
 " endif
+
+" SignColumn
+highlight SignColumn ctermbg=NONE cterm=NONE guibg=NONE gui=NONE

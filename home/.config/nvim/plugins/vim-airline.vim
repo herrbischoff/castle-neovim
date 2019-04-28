@@ -1,11 +1,12 @@
 " Plugin
 Plug 'bling/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 " Settings
 let g:airline_powerline_fonts = 0
 " let g:airline_theme='oceanicnext'
-let g:airline_theme='gruvbox'
+" let g:airline_theme='gruvbox'
+let g:airline_theme='solarized'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
